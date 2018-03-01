@@ -21,21 +21,18 @@ Page({
     this.setData({
       inputValue : e.detail.value 
     })
-     console.log(this.data.inputValue)  
-  },
-  // 跳转到搜索到的内容
+  }, 
+   // 跳转到搜索到的内容
   searchhistory:function(){
     var input = this.data.inputValue;
     !input && wx.showModal({
       title: '提示',
       content: '请输入搜索内容',
-    })
+    });
     var list = wx.getStorageSync("list")
     !list && (list=[]) 
-     input && list.push(input)
+    input && !list.includes(input)  && list.push(input)
     wx.setStorageSync("list", list)
-
-
   },
   
 
