@@ -1,0 +1,20 @@
+/**index.wxss**/
+.search-container{
+  width: 100%;
+  height: 300rpx;
+  background-color: #3c78ff;
+}
+.search-input{
+  width:80%;
+  height:40px;
+  background:#eee;
+  border-radius: 13px;
+}
+.mywrapper{
+  wdith:100%;
+  height:40px;
+}
+.searchInput{
+  width:80%;
+  height:auto;
+}

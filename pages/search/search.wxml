@@ -1,0 +1,22 @@
+<view class="container wrapper">
+    <view class="center header">
+        设置群目的地
+    </view>
+    <view class="outSearch">
+        <view class="insearch flex-row">
+          <view class="flex1 searchInput flex-row">
+            <icon class="iconsearch" type="search" size="20"></icon> 
+            <input class="inInput" placeholder="请输入搜索内容"></input> 
+          </view>
+          <button class="mybutton button-blue center" bindtap='toMap'>搜索</button> 
+        </view>
+      </view>
+      <view>
+        <view class="item-list" wx:for='{{historyList}}'>
+          <image class="item-img" src='../resouces/myicon/clock.png'></image>
+          <text class="item-text center flex1">{{item}}</text>
+          <image class="item-img"src="../resouces/myicon/ListInput.png"></image>
+        </view>
+      </view>
+    <view class="center clearItem" wx:if="{{historyList.length}}" bindtap='clearhistory'>清除历史记录</view>
+</view>

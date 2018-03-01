@@ -1,0 +1,61 @@
+/* pages/search/search.wxss */
+.header{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+}
+.outSearch{
+  width:100%;
+  height:100rpx;
+  border:1px solid #9e9e9e;
+  line-height: 80rpx;
+}
+.insearch{
+  width:97%;
+  height:80rpx;
+  margin-top:10rpx;
+  padding:0 10rpx;
+}
+.mybutton{
+  width:20%;
+  height:80rpx;
+  line-height:80rpx;
+}
+.searchInput{
+  height:80rpx;
+  background:#eee;
+  margin-right:20rpx;
+  border-radius:10rpx;
+  line-height:80rpx;
+}
+.iconsearch{
+  margin-top:25rpx;
+  margin-left:20rpx;
+}
+.inInput{
+  width:80%;
+  height:70rpx;
+  text-align: left;
+  /* background:red; */
+  margin-top:10rpx;
+}
+.item-list{
+  width:700rpx;
+  height:80rpx;
+  /* background:red; */
+  display:flex;
+  align-items:center;
+}
+.item-img{
+  width:40rpx;
+  height:40rpx;
+}
+.item-text{
+  font-size:32rpx;
+  color:#444;
+  
+}
+.clearItem{
+  width:200%;
+  line-height:100rpx;
+}
