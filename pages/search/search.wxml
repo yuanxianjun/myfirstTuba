@@ -6,7 +6,8 @@
         <view class="insearch flex-row">
           <view class="flex1 searchInput flex-row">
             <icon class="iconsearch" type="search" size="20"></icon> 
-            <input class="inInput" placeholder="请输入搜索内容" bindinput='inputHistory'></input> 
+            <input class="inInput" placeholder="请输入搜索内容" bindinput='inputHistory' 
+            value="{{inputValue}}" bindfocus='clearCon'></input> 
           </view>
           <button class="mybutton button-blue center" bindtap='searchhistory'>搜索</button> 
         </view>
@@ -15,7 +16,7 @@
         <view class="item-list" wx:for='{{historyList}}'>
           <image class="item-img" src='../resouces/myicon/clock.png'></image>
           <text class="item-text center flex1">{{item}}</text>
-          <image class="item-img"src="../resouces/myicon/ListInput.png"></image>
+          <image class="item-img"src="../resouces/myicon/ListInput.png" data-index="{{item}}" bindtap="fuzhi"></image>
         </view>
       </view>
     <view class="center clearItem" wx:if="{{historyList.length}}" bindtap='clearhistory'>清除历史记录</view>

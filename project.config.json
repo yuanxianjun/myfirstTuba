@@ -33,6 +33,12 @@
 					"name": "search",
 					"pathName": "pages/search/search",
 					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "搜索之后的页面",
+					"pathName": "pages/searchHistory/searchHistory",
+					"query": ""
 				}
 			]
 		}
