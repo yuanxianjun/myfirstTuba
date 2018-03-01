@@ -5,9 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    historyList:[
-      "北京","上海","太原","西安","深圳","湖北","武汉 ","天津","新疆"
-    ]
+    inputValue:"",
+    historyList:[]
   },
   // 清除历史记录
   clearhistory:function(){
@@ -16,17 +15,42 @@ Page({
       historyList:[]
     })
   },
-  // 跳转到地图
+  // 获取到输入框中的内容
+  inputHistory:function(e){
+    console.log(e)
+    this.setData({
+      inputValue : e.detail.value 
+    })
+     console.log(this.data.inputValue)  
+  },
+  // 跳转到搜索到的内容
+  searchhistory:function(){
+    var input = this.data.inputValue;
+    !input && wx.showModal({
+      title: '提示',
+      content: '请输入搜索内容',
+    })
+    var list = wx.getStorageSync("list")
+    !list && (list=[]) 
+     input && list.push(input)
+    wx.setStorageSync("list", list)
+
+
+  },
+  
+
   toMap:function(){
       wx.navigateTo({
-        url: '../map/map',
+        url: '../searchHistory/searchHistory',
       })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      historyList: wx.getStorageSync("list")
+    })      
   },
 
   /**

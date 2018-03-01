@@ -2,7 +2,7 @@
 <view class="container flex-column">
   <view class="search-container flew-column wrapper center">
      <view class="color-white center">设置群目的地</view>
-    <view class="mywrapper center flex-row  margin-top20">
+    <view class="mywrapper center flex-row  margin-top20 jus">
       <view class="search-input flex-row center jus">
           <icon class="margin-left20" type="search" size="20" color="#666666"></icon>
           <view class="searchInput color-hui" bindtap='clickEvent'>请输入搜索内容</view>
