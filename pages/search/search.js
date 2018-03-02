@@ -1,3 +1,5 @@
+import Appservie from '../services/Appservice.js'
+import Promise from '../vender/bluebird.min.js'
 // pages/search/search.js
 Page({
 
@@ -26,6 +28,8 @@ Page({
     this.setData({
       inputValue : e.detail.value     
     })
+    var input = this.data.inputValue;
+
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
@@ -33,29 +37,21 @@ Page({
         var longitude = res.longitude
         var speed = res.speed
         var accuracy = res.accuracy
-        var requestTask = wx.request({
-          url: 'https://w.mapbar.com/search2015/search/suggest',
-          data: {
-            keywords: e.detail.value,
-            city: '110000',
-            location: latitude + ',' + longitude
-          },
-          header: {
-            'content-type': 'application/json'
-          },
-          success: function (res) {
-            var arr = res.data.pois
-            var newlist = arr.map(function (item) {
-              return item.name
-            })
 
-            var detailList = _this.detailKey(newlist,_this.data.inputValue)
-            console.log(detailList)
-            _this.setData({
-              recommond: detailList
-            })
+        // 使用封装service
+        Appservie.searchSuggest("北京",longitude,latitude).then((res)=>{
+          console.log("封装结果",res)
+          var arr = res.data.pois
+          var newlist = arr.map(function (item) {
+            return item.name
+          })
 
-          }
+          var detailList = _this.detailKey(newlist, _this.data.inputValue)
+          // console.log(detailList)
+          _this.setData({
+            recommond: detailList
+          })
+
         })
       },
     })
