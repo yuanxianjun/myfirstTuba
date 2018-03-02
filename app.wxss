@@ -20,6 +20,9 @@
 .margin-left20{
   margin-left:20rpx;
 }
+.margin-right20{
+  margin-right: 20rpx;
+}
 .margin-left60{
   margin-left:60rpx;
 }

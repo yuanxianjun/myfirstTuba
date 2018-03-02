@@ -45,6 +45,7 @@
   /* background:red; */
   display:flex;
   align-items:center;
+
 }
 .item-img{
   width:40rpx;
@@ -56,6 +57,10 @@
   
 }
 .clearItem{
-  width:200%;
+  width:100%;
+  height:100rpx;
   line-height:100rpx;
+}
+.zhong{
+  overflow-wrap: hidden;
 }

@@ -1,5 +1,5 @@
 <view class="container wrapper">
-    <view class="center header">
+    <view class="center header font20">
         设置群目的地
     </view>
     <view class="outSearch">
@@ -13,11 +13,24 @@
         </view>
       </view>
       <view>
-        <view class="item-list" wx:for='{{historyList}}'>
-          <image class="item-img" src='../resouces/myicon/clock.png'></image>
-          <text class="item-text center flex1">{{item}}</text>
-          <image class="item-img"src="../resouces/myicon/ListInput.png" data-index="{{item}}" bindtap="fuzhi"></image>
-        </view>
+     
+      <!--搜索历史  -->
+         <view wx:if="{{!inputValue}}" class="item-list" wx:for='{{historyList}}'>
+          <image class="item-img margin-right20" src='../resouces/myicon/clock.png'></image>
+          <text class="zhong item-text center flex1">{{item}}</text>
+          <image class="item-img margin-left20"src="../resouces/myicon/ListInput.png" data-index="{{item}}" bindtap="fuzhi"></image>
+        </view> 
       </view>
-    <view class="center clearItem" wx:if="{{historyList.length}}" bindtap='clearhistory'>清除历史记录</view>
+    <view class="center clearItem" wx:if="{{historyList.length && !inputValue}}" bindtap='clearhistory'>清除历史记录</view>
+     <!--关联历史  -->
+       <view  class="item-list" wx:for='{{recommond}}'>
+          <image class="item-img margin-right20" src='../resouces/myicon/search.png'></image>
+          <view  class="zhong item-text center flex1 ">
+          <text>{{item.left}}</text>
+          <text class="color-main">{{item.middle}}</text>
+          <text>{{item.right}}</text>
+          </view>
+          
+          <image class="item-img margin-left20"src="../resouces/myicon/ListInput.png" data-index="{{item}}" bindtap="fuzhi"></image>
+        </view>
 </view>
