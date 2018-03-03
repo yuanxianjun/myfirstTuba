@@ -4,6 +4,25 @@ const app = getApp()
 
 Page({
   data: {
+    array: [{
+      src: "../resouces/myicon/index_a.png",
+      content: "设置目的地，自动建群"
+    }, {
+      src: "../resouces/myicon/share.png",
+      content: "分享给好友"
+    }, {
+      src: "../resouces/myicon/group.png",
+      content: "好友加入群组"
+    }, {
+      src: "../resouces/myicon/distance.png",
+      content: "查看群成员剩余距离"
+    }, {
+      src: "../resouces/myicon/time.png",
+      content: "查看群成员剩余时间"
+    }, {
+      src: "../resouces/myicon/groupchat.png",
+      content: "群组语音聊天"
+    }],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,

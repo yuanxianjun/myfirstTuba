@@ -15,7 +15,22 @@ function get(url,data){
     })
   })
 }
+// post方法
+function post(url,data){
+  return new Promise((resolve,reject)=>{
+    wx.request({
+      url: url,
+      data:data,
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success:resolve,
+      fail:reject
+    })
+  })
+}
 // 抛出方法
 module.exports={
-  get : get 
+  get : get ,
+  post: post
 }

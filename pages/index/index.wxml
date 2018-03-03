@@ -13,5 +13,14 @@
       <view>  快来设置目的地分享给好友</view>
      <view> 一起组队出发吧</view>   
   </view>
+  <view class="flex-row imgText" wx:for="{{array}}">
+    <view class="imgleft">
+      <image class="img40" src="{{item.src}}"></image>
+    </view>
+    <view class="flex1 textleft">
+    {{item.content}}
+    </view>
+    
+  </view>
 </view>
 

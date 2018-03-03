@@ -79,6 +79,8 @@ Page({
     !input && wx.showModal({
       title: '提示',
       content: '请输入搜索内容',
+    }) && wx.navigateTo({
+      url: '../searchHistory/searchHistory?data=${input}',
     })
     // 获取到storage中的内容
     var list = wx.getStorageSync("list")
@@ -92,9 +94,6 @@ Page({
         }
         
     }
-    wx.navigateTo({
-      url: '../searchHistory/searchHistory?data=${input}',
-    })
 
     // 如果浏览器不支持includes这个方法使用js进行
     // var tag = true;
@@ -113,27 +112,15 @@ wx.getLocation({
     var longitude = res.longitude
     var speed = res.speed
     var accuracy = res.accuracy
-    var requestTask = wx.request({
-      url: 'https://w.mapbar.com/search2015/search/suggest',
-      data: {
-        keywords:input ,
-        city: '110000',
-        location: latitude + ',' + longitude
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log('搜索结果', res.data)
-        var arr = res.data.pois
-        var newlist = arr.map(function(item){
-              return item.name
-        })
-        _this.setData({
-          recomond : newlist
-        })
-        
-      }
+    Appservie.searchSuggest().then((res)=>{
+      var arr = res.data.pois
+      var newlist = arr.map(function (item) {
+        return item.name
+      })
+      _this.setData({
+
+        recomond: newlist
+      })
     })
   },
 })
