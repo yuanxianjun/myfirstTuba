@@ -1,13 +1,13 @@
 <!--pages/searchHistory/searchHistory.wxml-->
 <view class="container">
-  <view class="flex-col maplist ">
-
+  <view class="flex-col maplist " wx:for="{{recommond}}">
+ 
     <view class="zhao">
       <view class="mingzi">
         <block >
           <icon type="info" color="blue" size="18"></icon>
         </block>
-        <text class="margin-left20 font25" space= 'true nbsp'>招商银行</text>
+        <text class="margin-left20 font25" space= 'true nbsp'> {{item.name}}</text>
       </view>
     
       <view class="qianmi">
@@ -16,7 +16,7 @@
     
      </view>
 
-    <view class="color-hui font20 margin-left60">北京市海淀区上地七街</view>
+    <view class="color-hui font20 margin-left60">{{item.address}}</view>
 
     <view class="look flex-row center">
       <view class="flex1 flex-row jus left center" bindtap="toMap">

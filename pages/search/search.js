@@ -39,7 +39,7 @@ Page({
         var accuracy = res.accuracy
 
         // 使用封装service
-        Appservie.searchSuggest("北京",longitude,latitude).then((res)=>{
+        Appservie.searchSuggest(input,longitude,latitude).then((res)=>{
           console.log("封装结果",res)
           var arr = res.data.pois
           var newlist = arr.map(function (item) {
@@ -79,8 +79,9 @@ Page({
     !input && wx.showModal({
       title: '提示',
       content: '请输入搜索内容',
-    }) && wx.navigateTo({
-      url: '../searchHistory/searchHistory?data=${input}',
+    }) 
+    input &&  wx.navigateTo({
+      url: `../searchHistory/searchHistory?keywords=${input}`,
     })
     // 获取到storage中的内容
     var list = wx.getStorageSync("list")
@@ -118,18 +119,11 @@ wx.getLocation({
         return item.name
       })
       _this.setData({
-
         recomond: newlist
       })
     })
   },
 })
-
-
-    
-    
-
-
 
   },
   //点击图标获取到改行的值将值赋给input框
