@@ -1,6 +1,26 @@
-<!--pages/map/map.wxml-->
-<view class="wrapper">
-<map longitude="113.324520" latitude="23.099994" markers="{{markers}}" covers="{{covers}}"
- style="width: 375px; height: 200px;">
-</map>
+<view class="myMap flex-column">
+    <map id="map" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}" 
+    scale="{{scale}}" 
+    markers="{{markers}}" 
+    bindmarkertap='markersEvent'
+    show-location 
+    include-points="{{markers}}"
+    class='flex1 mapper'></map>
+      <!--轮播  -->
+    <swiper class="mySwiper flex-column" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+            <view class="flex-column flex1 text2 font28">
+              <text class="text21">重庆麻辣烫(西二旗大街)</text>
+              <text class="text22  font25 color-hui">东北 1km 西二旗地铁b口附近</text>
+            </view>
+            <view class="center di" bindtap='toEndPoint'>
+                <image class="img30" src='../resouces/myicon/destination.png'></image>设终点
+            </view>
+        </swiper-item>
+      </block>
+    </swiper>
 </view>

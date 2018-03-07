@@ -14,6 +14,11 @@ Page({
       url: '../map/map?recommond=' + string,
     })
   },
+  toEndPoint: function () {
+    wx.navigateTo({
+      url: '../SetEndPoint/SetEndPoint',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

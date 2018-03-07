@@ -1,0 +1,14 @@
+<!--pages/Set/Set.wxml-->
+<view class="wrapper">
+    <view class="paddinglr flex-row b_b">
+     <text class="flex1">群名称</text>
+     <text class="font28 color-hui">深圳火车站></text>
+    </view>
+    <view class="paddinglr flex-row b_b">
+     <text class="flex1">自动播放语音消息</text>
+     <button>点击</button>
+    </view>
+    <view class="jie center font25 color-blue b_b">
+      <text space='&emsp , true'>解散并退出群组</text>   
+    </view>
+</view>

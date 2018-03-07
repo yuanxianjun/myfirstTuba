@@ -21,11 +21,11 @@
     <view class="look flex-row center">
       <view class="flex1 flex-row jus left center" bindtap="toMap">
         <image class="watchMap-image" style='width:30rpx;height:30rpx;' src="../resouces/myicon/watchMap.png"></image>
-        <view >看地图</view>
+        <view  >看地图</view>
       </view>
       <view class="flex1 flex-row jus center">
         <image class="watchMap-image" style='width:30rpx;height:30rpx;' src="../resouces/myicon/end.png"></image>
-        <view >设终点</view>
+        <view bindtap="toEndPoint" >设终点</view>
       </view>
       
     </view>

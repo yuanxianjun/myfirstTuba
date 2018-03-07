@@ -1,0 +1,55 @@
+/* pages/SetEndPoint/SetEndPoint.wxss */
+.header{
+  width:100%;
+  height:15%;
+  /* background:red; */
+}
+.myphoto{
+  width:100rpx;
+  height:150rpx;
+  background:red;
+}
+.three{
+  width:100%;
+  height:15%;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  padding:20rpx;
+  box-sizing:border-box;
+  justify-content: space-between;
+}
+.one{
+  width:30%;
+  border:1px solid #ccc;
+}
+.three text{
+  line-height:60rpx;
+  text-align:center;
+}
+.mapper{
+  width:100%;  
+}
+#map{
+  width:100%;
+  height:100%;
+}
+.footer{
+  width:100%;
+  height:10%;
+  /* background:blue; */
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left:15rpx;
+  padding-right:15rpx;
+}
+.footer image{
+  height:70rpx;
+  width:70rpx;
+}
+.said{
+  width:70%;
+  height:70%;
+  background:#9e9e9e5e;
+  line-height:90rpx;
+  border-radius:10rpx;
+}

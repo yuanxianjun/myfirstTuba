@@ -1,0 +1,41 @@
+<!--pages/SetEndPoint/SetEndPoint.wxml-->
+<view class="container wrapper flex-column">
+  <view class="header flex-row">
+    <view class="flex-column">
+      <image src='' class="myphoto"></image>
+      我的名字
+    </view>
+    <view class="flex-column center jus">
+      <image class="img100" src='../resouces/image/share.png'></image>
+      邀请
+    </view> 
+  </view>
+
+    <view class="three flex-row ">
+        <view class="one flex-column  jus">
+          <text class="color-blue font28">2180.1 <text class="color-blue font25">公里</text></text>
+          <text class="color-hui font25 mudi">距离目的地</text>
+        </view>
+        <view class="one flex-column  jus">
+          
+          <text class="color-blue font28"><text class="color-blue font28">30</text><text class="color-blue font25">小时</text>56<text class="color-blue font25">分钟</text></text>
+          <text class="color-hui font25 mudi">剩余时间</text>
+        </view>
+        <view class="one flex-column  jus">
+          <text class="color-blue font28">0 <text class="color-blue font25">km/h</text></text>
+          <text class="color-hui font25 mudi">当前时速</text>
+        </view>
+        <!-- <view>更新于03-07 19:57</view> -->
+    </view>
+  <!--地图  -->
+   <view class="mapper flex1">
+        <map id="map" class="mapper"></map>
+  </view> 
+  
+  <!--底部  -->
+  <view class="footer flex-row center ">
+    <image src="../resouces/myicon/set.png" bindtap="toSet"></image>
+    <view class="said">按住说话</view>
+    <image src="../resouces/myicon/chat.png" bindtap="tochat"></image>
+  </view>
+</view>

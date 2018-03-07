@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -38,6 +38,18 @@
 					"id": 1,
 					"name": "搜索之后的页面",
 					"pathName": "pages/searchHistory/searchHistory",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "地图",
+					"pathName": "pages/map/map",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "设终点",
+					"pathName": "pages/SetEndPoint/SetEndPoint",
 					"query": ""
 				}
 			]
