@@ -1,0 +1,9 @@
+/* pages/help/help.wxss */
+.mytext{
+  width:100%;
+  height:auto;
+  padding:20rpx;
+  margin:0;
+  /* background:red; */
+  box-sizing: border-box;
+}

@@ -23,4 +23,6 @@
         </swiper-item>
       </block>
     </swiper>
+
+   <view class="watchAll"> <image src='../resouces/myicon/allWatch.png'></image></view>
 </view>

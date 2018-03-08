@@ -13,14 +13,20 @@
       <view>  快来设置目的地分享给好友</view>
      <view> 一起组队出发吧</view>   
   </view>
-  <view class="flex-row imgText" wx:for="{{array}}">
+  <view class="overAuto flex-row imgText" wx:for="{{array}}">
     <view class="imgleft">
       <image class="img40" src="{{item.src}}"></image>
     </view>
     <view class="flex1 textleft">
     {{item.content}}
-    </view>
-    
+    </view>   
+  </view>
+  <view class="help" bindtap='tohelp'>
+    <image class="imgleft " src='../resouces/myicon/help.png'></image>
+    使用帮助
+  </view>
+  <view class="footer center jus">
+    <text class="color-blue font28" space='ensp' bindtap='showModel'>输入已有群号码,快速加入群组</text>
   </view>
 </view>
 

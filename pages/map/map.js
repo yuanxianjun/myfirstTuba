@@ -119,6 +119,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 设置头部
+    wx.setNavigationBarTitle({
+      title: '地图',
+    })
       var _this=this
       wx.getLocation({
         type: 'wgs84',
@@ -138,6 +142,7 @@ Page({
           recommond:JSON.parse(options.recommond)
       })
       console.log("地图页面",this.data.recommond)
+     
   },
 
   /**

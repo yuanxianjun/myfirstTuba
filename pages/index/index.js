@@ -33,11 +33,24 @@ Page({
       url: '../search/search',
     })
   },
+  // 点击弹出输入群号码
+  showModel(){
+    wx.showModal({
+      title: '请输入群号码',
+      content: `这里是一个输入框`
+    })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  // 点击跳转到帮助页面
+  tohelp:function(){
+      wx.navigateTo({
+        url: '../help/help',
+      })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

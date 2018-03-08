@@ -7,26 +7,13 @@
     "pages/searchHistory/searchHistory",
     "pages/SetEndPoint/SetEndPoint",
     "pages/Set/Set",
-    "pages/chat/chat"
+    "pages/chat/chat",
+    "pages/help/help"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#3c78ff",
     "navigationBarTitleText": "图吧同行",
     "navigationBarTextStyle":"#fff"
-  },
-  "tabBar": {
-    "color":"black",
-    "selectedColor": "#3c78ff",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
-      }
-    ]
   }
 }

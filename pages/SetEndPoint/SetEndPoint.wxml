@@ -1,9 +1,9 @@
 <!--pages/SetEndPoint/SetEndPoint.wxml-->
 <view class="container wrapper flex-column">
   <view class="header flex-row">
-    <view class="flex-column">
-      <image src='' class="myphoto"></image>
-      我的名字
+    <view class="flex-column center jus">
+      <image src='{{userInfo.avatarUrl}}' class="myphoto"></image>
+      <text class="color-blue font25"> {{userInfo.nickName}}</text> 
     </view>
     <view class="flex-column center jus">
       <image class="img100" src='../resouces/image/share.png'></image>
@@ -35,7 +35,9 @@
   <!--底部  -->
   <view class="footer flex-row center ">
     <image src="../resouces/myicon/set.png" bindtap="toSet"></image>
-    <view class="said">按住说话</view>
+    <view class="said" bindtap='getRecord'>按住说话</view>
     <image src="../resouces/myicon/chat.png" bindtap="tochat"></image>
   </view>
+  <!--点击可以全揽  -->
+  <view class="watchAll"> <image src='../resouces/myicon/allWatch.png'></image></view>
 </view>
