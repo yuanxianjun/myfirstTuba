@@ -1,7 +1,8 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+import  wxService from '../services/Wxservice.js';
+import  AppService from '../services/Appservice.js';
 Page({
   data: {
     array: [{
@@ -53,6 +54,24 @@ Page({
       })
   },
   onLoad: function () {
+    // 登录获取code码
+    wxService.login().then((res)=>{
+      var data = {};
+       data.code=res.code
+      return wxService.getUserInfo().then((res)=>{
+        var  res = JSON.parse(res.rawData)      
+        data.name = res.nickName
+        data.avatarUrl = res.avatarUrl
+        return data
+      })
+    }).then((res) => {
+        AppService.login(res).then((res)=>{
+          console.log(res)
+        })
+    }).catch((err)=>{
+      console.log(err)
+    })
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

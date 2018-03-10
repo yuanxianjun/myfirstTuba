@@ -1,2 +1,11 @@
 <!--pages/chat/chat.wxml-->
-<text>pages/chat/chat.wxml</text>
+<view class="wrapper">
+    <view class="left flex-row">
+      <text>原县军---</text>
+      <text class="flex1">你现在走到哪了?</text>
+    </view>
+    <view class="right flex-row">
+    <text class="">我现在走到*****</text>
+    <text>---李武帝</text>
+    </view>
+</view>

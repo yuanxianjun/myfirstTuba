@@ -20,7 +20,12 @@ function searcResult(value,longitude,latitude){
     location: longitude + ',' + latitude
   })
 }
+// 登录领取code码之后调取数据
+function login(data){
+  return BaseService.get("https://wireless.mapbar.com/api/3n1-wxgroup/wxGroup/login.json",data)
+}
 module.exports={
   searchSuggest,
-  searcResult
+  searcResult,
+  login
 }
